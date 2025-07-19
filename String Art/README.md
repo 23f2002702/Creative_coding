@@ -2,7 +2,7 @@
 
 **Recreate stunning string art automatically using Python!**
 
-This project generates beautiful string art by looping a single thread around nails placed along a circle’s perimeter — all using a simple algorithm that matches an input image.  
+This project generates beautiful string art by looping a single thread around nails placed along a circle’s perimeter — all using a simple algorithm that matches an input image.
 
 ---
 
@@ -19,9 +19,11 @@ This project generates beautiful string art by looping a single thread around na
 3. **String Algorithm:**  
    - The script finds the next best nail to pull the thread to — maximizing how well the string matches the original image.
    - It repeats this for a set number of pulls (e.g. 4000).
-   - After every 50 pulls, it saves a progress snapshot in the `Output` folder.
+   - After every 50 pulls, it saves a progress snapshot.
 
 4. **Output:**  
+   - **Automatic unique output folders:**  
+     Each run creates a new `Output`, `Output_1`, `Output_2`, ... folder so previous results are never overwritten.
    - Final string art image (`Final.jpg`).
    - A `thread_sequence.txt` file with:
      - Estimated total thread length.
@@ -33,7 +35,7 @@ This project generates beautiful string art by looping a single thread around na
 ## ✅ Features
 
 - Hardcoded input/output paths for easy testing.
-- Auto-creates an `Output` folder.
+- **Auto-creates unique `Output` folders** for each run.
 - Saves all snapshots every `SNAPSHOT_INTERVAL` pulls.
 - Prints useful progress in the console.
 - Compatible with any image size (will be cropped to square automatically).
@@ -42,17 +44,23 @@ This project generates beautiful string art by looping a single thread around na
 
 ## 🗂 File Structure
 
-StringArt/  
-- ├── String_Art.py         # Main script (this code)  
-- ├── input.jpg            # Your input image (example)  
-- └── Output/  
-    - ├── Final.jpg  
-    - ├── thread_sequence.txt  
-    - ├── 50.jpg  
-    - ├── 100.jpg  
-    - ├── ...  
+```plaintext
+StringArt/
+├── String_Art.py         # Main script (this code)
+├── input.jpg             # Your input image (example)
+└── Output/               # First run output
+    ├── Final.jpg
+    ├── thread_sequence.txt
+    ├── 50.jpg
+    ├── 100.jpg
+    ├── ...
 
-
+└── Output_1/             # Second run output
+    ├── Final.jpg
+    ├── thread_sequence.txt
+    ├── 50.jpg
+    ├── ...
+```
 ---
 
 ## 🧵 Real-Life Build
