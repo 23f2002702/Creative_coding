@@ -11,8 +11,8 @@ import os
 # Hardcoded settings
 # ============================
 
-INPUT_FILE = r"C:\Users\Shilajit Mukherjee\Videos\VS CODE\String Art\Hehe.jpg"
-OUTPUT_FOLDER = r"C:\Users\Shilajit Mukherjee\Videos\VS CODE\String Art\Output"
+INPUT_FILE = "ENTER THE FILE PATH OF THE INPUT IMAGE "
+OUTPUT_FOLDER = "ENTER THE FILE PATH WHERE YOU WANT TO STORE THE OUTPUT IMAGE "
 OUTPUT_FILE = os.path.join(OUTPUT_FOLDER, "Final.jpg")
 SNAPSHOT_INTERVAL = 50  # every 50 pulls
 PULL_AMOUNT = 4000  # total pulls
